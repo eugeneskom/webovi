@@ -1,0 +1,51 @@
+.clients {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(51%);
+  background-color: $secondary;
+  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+  max-width: 1276px;
+  margin-left: auto;
+  z-index: 10;
+  padding: 60px 166px 54px 65px;
+
+  @include r(1300) {
+    padding: 30px 110px 50px 90px;
+    min-width: 100%;
+    left: 0;
+  }
+
+  @include r(992) {
+    padding: 25px 0px 20px 80px;
+  }
+
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    max-height: 113px;
+    max-width: 156px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__logo {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .slick-slider,
+  .slick-initialized {
+    position: relative;
+  }
+
+}

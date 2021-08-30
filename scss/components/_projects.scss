@@ -1,0 +1,195 @@
+.projects {
+  @include r(992) {
+    .card {
+      order: -1;
+      max-width: 70%;
+      margin-bottom: 60px;
+    }
+  }
+
+  @include r(768) {
+    .card {
+      max-width: 100%;
+    }
+  }
+
+  &__inner {
+    padding: 150px 0 160px;
+
+    @include r(1200) {
+      padding: 50px 0;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 102px;
+
+    @include r(1200) {
+      margin-bottom: 50px;
+    }
+
+    @include r(992) {
+      flex-direction: column;
+    }
+
+  }
+
+  &__heading {
+    max-width: 335px;
+    line-height: 1.5;
+    margin-right: 125px;
+
+    @include r(992) {
+      max-width: 80%;
+      margin: 0 auto 30px;
+    }
+
+    @include r(768) {
+      max-width: 100%;
+    }
+  }
+
+  &__description {
+    max-width: 460px;
+    line-height: 1.625;
+    @include text-clamp(4);
+
+    @include r(992) {
+      max-width: 80%;
+    }
+
+    @include r(768) {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    @include r(1200) {
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+
+    @include r(992) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 165px;
+    }
+
+    &:nth-child(even) {
+      justify-content: flex-start;
+    }
+
+    &:nth-child(odd) {
+      justify-content: flex-end;
+    }
+  }
+
+
+  &__wallpaper {
+    max-width: 735px;
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+
+
+
+    &:nth-child(odd) {
+      margin-right: 96px;
+    }
+
+    &:nth-child(even) {
+      margin-left: 96px;
+    }
+
+    @include r(1200) {
+      &:nth-child(odd) {
+        margin-right: 40px;
+      }
+
+      &:nth-child(even) {
+        margin-left: 40px;
+      }
+    }
+
+    @include r(992) {
+      margin-bottom: 50px;
+
+      &:nth-child(odd) {
+        margin-right: 0px;
+      }
+
+      &:nth-child(even) {
+        margin-left: 0px;
+      }
+    }
+  }
+
+
+  &__person {
+    position: absolute;
+    bottom: -35px;
+
+    &--right {
+      right: -40px;
+    }
+
+    &--left {
+      left: -40px;
+    }
+
+    @include r(1200) {
+      position: absolute;
+      bottom: 0;
+
+      &--right {
+        right: 0;
+      }
+
+      &--left {
+        left: 0;
+      }
+    }
+  }
+
+  &__card {
+    margin-top: 81px;
+
+    @include r(1200) {
+      margin-top: 30px;
+    }
+
+    &:nth-child(odd) {
+      padding-left: 10px;
+    }
+
+    &:nth-child(even) {
+      padding-right: 10px;
+    }
+  }
+
+  &__card-heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.33;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

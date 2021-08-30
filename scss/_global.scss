@@ -1,0 +1,179 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: $text;
+  background-color: #f2f2f2;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  max-width: 1130px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.25;
+
+  @include r(1200) {
+    font-size: 50px;
+  }
+
+  @include r(768) {
+    font-size: 30px;
+  }
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+
+
+.link {
+  display: inline-block;
+  color: #D4D6D4;
+  text-transform: capitalize;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  span {
+    padding-left: 8px;
+    transition: fill 0.3s;
+  }
+
+  & path {
+    fill: #D4D6D4;
+    transition: fill 0.3s;
+  }
+
+  &:hover path {
+    fill: $accent;
+  }
+
+  &:hover span {
+    color: #FFD723;
+    border-bottom: 1px solid $accent;
+  }
+
+  &::before {
+    content: '';
+    height: 9px;
+    width: 5px;
+  }
+}
+
+
+
+.highlight {
+  background-color: rgba(255, 215, 35, 0.1);
+}
+
+
+
+.card {
+  max-width: 430px;
+  padding: 0 15px;
+
+  &__subtitle {
+    margin-bottom: 29px;
+  }
+
+
+  &__heading {
+    margin-bottom: 34px;
+    font-size: 36px;
+    line-height: 1.33;
+
+    @include r(1200) {
+      font-size: 30px;
+    }
+
+    @include r(768) {
+      font-size: 25px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 90px;
+    line-height: 1.625;
+
+    @include text-clamp(5);
+
+    & p:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+
+}
+
+
+
+.person-box {
+  max-width: 453px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+  @include r(768) {
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  &__description {
+    font-style: italic;
+    line-height: 1.625;
+    margin-bottom: 24px;
+    @include text-clamp(4);
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+
+  &__avatar {
+    max-width: 46px;
+    width: 46px;
+    max-height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 14px;
+  }
+
+  &__name {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  &__position {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
